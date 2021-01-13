@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Label" HorizontalAlignment="Left" Height="5" Margin="333,33,0,0" VerticalAlignment="Top" Width="26"/>
+        <Label x:Name="lblSendSMS" Content="Send your SMS!" HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="323" FontSize="36" FontFamily="Arial Black"/>
+        <Label x:Name="lblPhoneNumber" Content="Phone Number" HorizontalAlignment="Left" Height="56" Margin="10,95,0,0" VerticalAlignment="Top" Width="166" FontSize="18" FontFamily="Arial Black"/>
+        <TextBox x:Name="txtPhoneNumber" HorizontalAlignment="Left" Height="56" Margin="224,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" FontSize="14" FontFamily="Courier New"/>
+        <Label x:Name="lblMessage" Content="Message" HorizontalAlignment="Left" Height="56" Margin="10,156,0,0" VerticalAlignment="Top" Width="166" FontSize="18" FontFamily="Arial Black"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="152" Margin="224,156,0,0" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" IsReadOnly="False" AcceptsReturn="True" VerticalAlignment="Top" Width="328" FontSize="14" FontFamily="Courier New" TextChanged="txtMessage_TextChanged"/>
+        <TextBlock x:Name="CharCount" Text="0 / 100" HorizontalAlignment="Left" Height="40" Margin="224,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Height="75" Margin="543,334,0,0" VerticalAlignment="Top" Width="239"/>
+
     </Grid>
 </Window>
