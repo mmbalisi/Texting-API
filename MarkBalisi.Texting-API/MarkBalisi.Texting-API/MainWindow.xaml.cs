@@ -36,5 +36,21 @@ namespace MarkBalisi.Texting_API
             txtMessage.MaxLength = 100;
             
         }
+
+        private void btnSend_Click(object sender, RoutedEventArgs e)
+        {
+            string PhoneNumber = txtPhoneNumber.Text;
+            string Message = txtMessage.Text;
+            
+            var client = new RestSharp.RestClient("https://www.itexmo.com/php_api/api.php");
+
+            var request = new RestSharp.RestRequest(RestSharp.Method.POST);
+                request.AddParameter("1", PhoneNumber);
+                request.AddParameter("2", Message);
+                request.AddParameter("3", "TR-MARKJ945166_VM4H6");
+                request.AddParameter("passwd", "fsm4z4#k%8");
+            
+            client.Execute(request);
+        }
     }
 }
